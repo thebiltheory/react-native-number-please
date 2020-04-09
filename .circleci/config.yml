@@ -26,6 +26,9 @@ jobs:
       - run:
           name:  📦 Install packages
           command: yarn install
+      - run:
+          name:  🚧 Building
+          command: yarn build
       - run: 
           name: 🚀 Publish to Github Package
           command: yarn ci:publish
