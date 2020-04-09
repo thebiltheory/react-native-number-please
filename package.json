@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/thebiltheory/react-native-number-please.git"
+    "url": "https://github.com/thebiltheory/react-native-number-please.git"
   },
   "keywords": [
     "react-native",
