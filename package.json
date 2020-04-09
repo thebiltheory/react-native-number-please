@@ -1,5 +1,5 @@
 {
-  "name": "react-native-number-please",
+  "name": "@thebiltheory/react-native-number-please",
   "version": "0.0.0-development",
   "description": "React Native number picker",
   "main": "dist/index.js",
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/thebiltheory/react-native-number-please.git"
+    "url": "git://github.com/thebiltheory/react-native-number-please.git"
   },
   "keywords": [
     "react-native",
