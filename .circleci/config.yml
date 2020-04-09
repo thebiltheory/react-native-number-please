@@ -1,64 +1,24 @@
 version: 2.1
-
 orbs:
-  rn: react-native-number-please
-
+  node: circleci/node@1.1.6
 jobs:
-  checkout_code:
-    executor: rn/linux_js
+  build-and-test:
+    executor:
+      name: node/default
     steps:
       - checkout
-      - persist_to_workspace:
-          root: .
-          paths: .
-  analyze:
-    executor: rn/linux_js
-    steps:
-      - attach_workspace:
-          at: .
-      - rn/yarn_install
-      - run:
-          name: 🧹 Linting
-          command: yarn run eslint
-      - run:
-          name: TypeScript
-          command: yarn run validate:typescript
-      - run:
-          name: 🧪 Testing
-          command: yarn run test:jest
-  publish:
-    executor: rn/linux_js
-    steps:
-      - attach_workspace:
-          at: .
-      - rn/yarn_install
-      - run:
-          name: Publish to NPM
-          command: yarn ci:publish
-
+      - node/with-cache:
+          steps:
+            - run:
+                name:  📦 Install packages
+                command: yarn install
+            - run:
+                name:  🧹 Linting
+                command: yarn lint
+            - run:
+                name:  🧪 Testing
+                command: yarn test
 workflows:
-  test:
-    jobs:
-      - checkout_code
-      - analyze:
-          requires:
-            - checkout_code
-      - rn/android_build:
-          name: android_debug_build
-          project_path: "example/android"
-          build_type: debug
-          requires:
-            - analyze
-      - rn/android_build:
-          name: android_release_build
-          project_path: "example/android"
-          build_type: release
-          requires:
-            - analyze
-      - publish:
-          requires:
-            - checkout_code
-            - analyze
-          filters:
-            branches:
-              only: master
+    build-and-test:
+      jobs:
+        - build-and-test
