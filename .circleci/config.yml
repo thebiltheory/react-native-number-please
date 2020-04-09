@@ -32,6 +32,9 @@ jobs:
       - run: 
           name: 🚀 Publish to Github Package
           command: yarn ci:publish
+          env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 workflows:
     build-and-test:
