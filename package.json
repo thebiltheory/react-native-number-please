@@ -1,5 +1,5 @@
 {
-  "name": "@thebiltheory/react-native-number-please",
+  "name": "react-native-number-please",
   "version": "0.0.0-development",
   "description": "React Native number picker",
   "main": "dist/index.js",
