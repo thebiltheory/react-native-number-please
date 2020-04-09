@@ -1,0 +1,15 @@
+# Logs
+*.log
+npm-debug.log
+yarn-error.log
+
+# Runtime data
+tmp
+build
+dist
+
+# Dependency directory
+node_modules
+
+# Jest 
+.jest/

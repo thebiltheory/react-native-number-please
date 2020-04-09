@@ -1,0 +1,74 @@
+{
+  "name": "react-native-number-please",
+  "version": "1.0.2",
+  "description": "React Native number picker",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "./dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thebiltheory/react-native-number-please.git"
+  },
+  "keywords": [
+    "react-native",
+    "number",
+    "picker",
+    "digit",
+    "dropdown"
+  ],
+  "author": "Bil Benhamou <bil@thebiltheory.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thebiltheory/react-native-number-please/issues"
+  },
+  "homepage": "https://github.com/thebiltheory/react-native-number-please#readme",
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
+  },
+  "devDependencies": {
+    "@types/jest": "^25.2.1",
+    "@types/lodash.find": "^4.6.6",
+    "@types/lodash.findindex": "^4.6.6",
+    "@types/react": "^16.9.32",
+    "@types/react-native": "^0.62.2",
+    "@types/react-test-renderer": "^16.9.2",
+    "microbundle": "^0.11.0",
+    "prettier": "^2.0.4",
+    "react": "^16.13.1",
+    "react-addons-test-utils": "^15.6.2",
+    "react-native": "^0.62.1",
+    "react-native-typescript-transformer": "^1.2.13",
+    "ts-jest": "^25.3.1",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "immer": "^6.0.3",
+    "lodash.find": "^4.6.0",
+    "lodash.findindex": "^4.6.0"
+  },
+  "jest": {
+    "preset": "react-native",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "transform": {
+      "^.+\\.(js)$": "<rootDir>/node_modules/babel-jest",
+      "\\.(ts|tsx)$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "testPathIgnorePatterns": [
+      "\\.snap$",
+      "<rootDir>/node_modules/"
+    ],
+    "cacheDirectory": ".jest/cache"
+  }
+}
