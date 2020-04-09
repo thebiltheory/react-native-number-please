@@ -1,5 +1,8 @@
 # React Native Number Please
 
+[![Build](https://circleci.com/gh/thebiltheory/react-native-number-please.svg?style=shield)](https://app.circleci.com/pipelines/github/thebiltheory/react-native-number-please) ![MIT License](https://img.shields.io/github/license/thebiltheory/react-native-number-please/LICENSE) 
+
+
 Generate react-native pickers with range numbers.
 
 ## Install
