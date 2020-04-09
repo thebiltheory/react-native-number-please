@@ -1,17 +1,21 @@
-# React Native Number Please
-
 [![Build](https://circleci.com/gh/thebiltheory/react-native-number-please.svg?style=shield)](https://app.circleci.com/pipelines/github/thebiltheory/react-native-number-please) ![NPM](https://img.shields.io/npm/l/react-native-number-please)
 
+# React Native Number Please 🙏🏽
 
-Generate react-native pickers with range numbers.
+One Paragraph of project description goes here
 
 ## Example
 <img src="https://i.ibb.co/0GkCZnz/ezgif-3-f565f85e890a.gif" alt="ezgif-3-f565f85e890a" width="300px" border="0">
 
-## Install
+
+### Installing
+
+Add the package to your project
 
 ```bash
 yarn add react-native-number-please
+
+npm install -S react-native-number-please
 ```
 
 ## Usage
@@ -73,3 +77,7 @@ const ItsYourBirthday = () => {
   );
 };
 ```
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
