@@ -1,6 +1,5 @@
 import * as React from 'react';
-import { View, StyleSheet } from 'react-native';
-import { Picker } from '@react-native-community/picker';
+import { View, StyleSheet, Picker } from 'react-native';
 import find from 'lodash.find';
 import findIndex from 'lodash.findindex';
 import produce from 'immer';
