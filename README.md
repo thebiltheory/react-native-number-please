@@ -2,7 +2,7 @@
 
 # React Native Number Please 🙏🏽
 
-One Paragraph of project description goes here
+Generate react-native pickers with range numbers. 
 
 ## Example
 <img src="https://i.ibb.co/0GkCZnz/ezgif-3-f565f85e890a.gif" alt="ezgif-3-f565f85e890a" width="300px" border="0">
