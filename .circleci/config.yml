@@ -23,6 +23,9 @@ jobs:
       name: node/default
     steps:
       - checkout
+      - run:
+          name:  📦 Install packages
+          command: yarn install
       - run: 
           name: 🚀 Publish to Github Package
           command: yarn ci:publish
