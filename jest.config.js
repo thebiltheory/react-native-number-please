@@ -1,15 +1,38 @@
+// "jest": {
+//     "preset": "react-native",
+//     "moduleFileExtensions": [
+//       "ts",
+//       "tsx",
+//       "js"
+//     ],
+//     "transform": {
+//       "^.+\\.(js)$": "babel-jest",
+//       "\\.(ts|tsx)$": "ts-jest"
+//     },
+//     "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+//     "testPathIgnorePatterns": [
+//       "\\.snap$",
+//       "<rootDir>/node_modules/"
+//     ],
+//     "cacheDirectory": ".jest/cache"
+//   }
+
+const { defaults: tsjPreset } = require('ts-jest/presets');
+
 module.exports = {
-  preset: "react-native",
-  moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json"],
-  testRegex: "(/__tests__/.*|(\\.|/)(test|spec))\\.(js|ts)x?$",
+  ...tsjPreset,
+  preset: 'react-native',
   transform: {
-    "^.+\\.(js|tsx?)$":
-      "<rootDir>/node_modules/react-native/jest/preprocessor.js",
+    ...tsjPreset.transform,
+    '^.+\\.(js|ts|tsx)$':
+      '<rootDir>/node_modules/react-native/jest/preprocessor.js',
   },
-  testPathIgnorePatterns: ["\\.snap$", "<rootDir>/node_modules/"],
-  cacheDirectory: ".jest/cache",
-  transformIgnorePatterns: [
-    "node_modules/(?!(react-native|react-navigation|react-navigation-tabs|react-navigation-redux-helpers|react-native-safari-view|react-native-linear-gradient|react-native-blur|react-native-animatable|react-native-wkwebview-reborn|react-native-safe-area-view|react-native-popup-menu|redux-persist)/)",
-  ],
-  setupFiles: ["./__mocks__/react-native.js"],
+  globals: {
+    'ts-jest': {
+      babelConfig: true,
+    },
+  },
+  // This is the only part which you can keep
+  // from the above linked tutorial's config:
+  cacheDirectory: '.jest/cache',
 };

@@ -1,3 +1,8 @@
+export interface IValue {
+  id: 'string';
+  value: number;
+}
+
 export interface IDigits {
   id: string;
   label?: string;

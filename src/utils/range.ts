@@ -5,12 +5,12 @@ export default function range(start: number, end: number, step = 1) {
 
   // Throw an error if any of the first 3 arguments is not a finite number.
   if (!allNumbers) {
-    throw new TypeError("range() expects only finite numbers as arguments.");
+    throw new TypeError('range() expects only finite numbers as arguments.');
   }
 
   // Ensure the step is always a positive number.
   if (step <= 0) {
-    throw new Error("step must be a number greater than 0.");
+    throw new Error('step must be a number greater than 0.');
   }
 
   // When the start number is greater than the end number,
