@@ -19,7 +19,7 @@ exports[`renders correctly 1`] = `
       }
     }
   >
-    <RNCPicker
+    <RCTPicker
       items={
         Array [
           Object {
