@@ -9,8 +9,7 @@
     "test": "jest",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "ci:publish": "yarn semantic-release",
-    "semantic-release": "semantic-release",
-    "emulate:ci": "CIRCLECI=true CIRCLE_BRANCH=master DEBUG=condition     npm_config_loglevel=verbose npm run semantic-release"
+    "semantic-release": "semantic-release"
   },
   "repository": {
     "type": "git",

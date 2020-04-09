@@ -31,10 +31,7 @@ jobs:
           command: yarn build
       - run: 
           name: 🚀 Publish to Github Package
-          command: yarn ci:publish
-          environment: 
-            GH_TOKEN: echo ${GH_TOKEN}
-            NPM_TOKEN: echo ${NPM_TOKEN}
+          command: yarn semantic-release || true
 
 workflows:
     build-and-test:
