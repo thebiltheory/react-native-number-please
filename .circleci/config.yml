@@ -37,3 +37,6 @@ workflows:
         - publish: 
             requires:
               - build-and-test
+            filters:
+              branches:
+                only: master
