@@ -1,0 +1,36 @@
+version: 2.1
+orbs:
+  node: circleci/node@1.1.6
+jobs:
+  build-and-test:
+    executor:
+      name: node/default
+    steps:
+      - checkout
+      - node/with-cache:
+          steps:
+            - run:
+                name:  📦 Install packages
+                command: yarn install
+            - run:
+                name:  🧹 Linting
+                command: yarn lint
+            - run:
+                name:  🧪 Testing
+                command: yarn test
+  publish:
+    executor:
+      name: node/default
+    steps:
+      - checkout
+      - run: 
+          name: 🚀 Publish to Github Package
+          command: yarn ci:publish
+
+workflows:
+    build-and-test:
+      jobs:
+        - build-and-test
+        - publish: 
+            requires:
+              - build-and-test
