@@ -1,11 +1,15 @@
-[![Build](https://circleci.com/gh/thebiltheory/react-native-number-please.svg?style=shield)](https://app.circleci.com/pipelines/github/thebiltheory/react-native-number-please) ![NPM](https://img.shields.io/npm/l/react-native-number-please)
-
 # React Native Number Please 🙏🏽
+
+[![Build](https://circleci.com/gh/thebiltheory/react-native-number-please/tree/master.svg?style=shield)](https://app.circleci.com/pipelines/github/thebiltheory/react-native-number-please) ![npm](https://img.shields.io/npm/v/react-native-number-please?color=%236820FE) ![npm](https://img.shields.io/npm/dm/react-native-number-please) ![NPM](https://img.shields.io/npm/l/react-native-number-please)
 
 Generate react-native pickers with range numbers. 
 
-## Example
+## Example 
+
+[![runs with expo](https://img.shields.io/badge/Runs%20with%20Expo-4630EB.svg?style=flat-square&logo=EXPO&labelColor=f3f3f3&logoColor=000)](https://snack.expo.io/@thebiltheory/react-native-number-please)
+
 <img src="https://i.ibb.co/0GkCZnz/ezgif-3-f565f85e890a.gif" alt="ezgif-3-f565f85e890a" width="300px" border="0">
+
 
 
 ### Installing
