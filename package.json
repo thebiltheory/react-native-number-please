@@ -20,7 +20,10 @@
     "number",
     "picker",
     "digit",
-    "dropdown"
+    "dropdown",
+    "react",
+    "numbers",
+    "select"
   ],
   "author": "Bil Benhamou <bil@thebiltheory.com>",
   "license": "MIT",
