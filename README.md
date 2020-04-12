@@ -82,6 +82,18 @@ const ItsYourBirthday = () => {
 };
 ```
 
+## Props
+
+Prop | Required | Description | Default
+---- | ---------| ----------- | -------
+`digits` | ✅ | Array of objects containing individal picker config  | `undefined`
+`values`  | ✅ | Array of objects initial values for each picker in `digits`  | `undefined`
+`onChange` | ✅ | Callback for when an item is selected.  | `undefined`
+`pickerStyle` | Optional | Picker wrapper style object.  | `{}`
+`itemStyle` | Optional | Picker item style object.  | `{}`
+
+
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
