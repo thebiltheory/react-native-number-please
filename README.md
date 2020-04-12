@@ -84,14 +84,29 @@ const ItsYourBirthday = () => {
 
 ## Props
 
-Prop | Required | Description | Default
----- | ---------| ----------- | -------
-`digits` | ✅ | Array of objects containing individal picker config  | `undefined`
-`values`  | ✅ | Array of objects initial values for each picker in `digits`  | `undefined`
-`onChange` | ✅ | Callback for when an item is selected.  | `undefined`
-`pickerStyle` | Optional | Picker wrapper style object.  | `{}`
-`itemStyle` | Optional | Picker item style object.  | `{}`
+Prop | Required | Description | Default | Types
+---- | ---------| ----------- | ------- | -----
+`digits` | ✅ | Array of objects containing individal picker config  | `undefined` | `IDigit[]`
+`values`  | ✅ | Array of objects initial values for each picker in `digits`  | `undefined` | `IValue[]`
+`onChange` | ✅ | Callback for when an item is selected.  | `undefined` | 
+`pickerStyle` | Optional | Picker wrapper style object.  | `{}`| 
+`itemStyle` | Optional | Picker item style object.  | `{}`| 
 
+## Interfaces
+
+```ts
+interface IDigit {
+    id: string;
+    label?: string;
+    min: number;
+    max: number;
+}
+
+interface IValue {
+  id: string;
+  value: number;
+}
+```
 
 
 ## License

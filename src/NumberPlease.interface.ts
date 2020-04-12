@@ -1,9 +1,4 @@
-export interface IValue {
-  id: 'string';
-  value: number;
-}
-
-export interface IDigits {
+export interface IDigit {
   id: string;
   label?: string;
   min: number;
@@ -11,10 +6,14 @@ export interface IDigits {
   step?: number;
 }
 
+export interface IValue {
+  id: string;
+  value: number;
+}
+
 export interface INumberPleaseProps {
-  digits: IDigits[];
-  values: object[];
-  // format: any;
+  digits: IDigit[];
+  values: IValue[];
   onChange(value: any): any;
   divider?: any;
   pickerStyle?: {};
