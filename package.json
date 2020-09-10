@@ -63,7 +63,7 @@
     "typescript": "^3.8.3"
   },
   "dependencies": {
-    "immer": "^6.0.3",
+    "immer": "^7.0.9",
     "lodash.find": "^4.6.0",
     "lodash.findindex": "^4.6.0"
   },
