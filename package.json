@@ -42,7 +42,7 @@
     "@types/lodash.find": "^4.6.6",
     "@types/lodash.findindex": "^4.6.6",
     "@types/react": "^16.9.32",
-    "@types/react-native": "^0.62.2",
+    "@types/react-native": "^0.63.52",
     "@types/react-test-renderer": "^16.9.2",
     "@typescript-eslint/eslint-plugin": "^2.27.0",
     "@typescript-eslint/parser": "^2.27.0",
