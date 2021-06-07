@@ -59,7 +59,7 @@
     "react-native-typescript-transformer": "^1.2.13",
     "react-test-renderer": "^16.13.1",
     "semantic-release": "^17.0.4",
-    "ts-jest": "^25.3.1",
+    "ts-jest": "^27.0.3",
     "typescript": "^3.8.3"
   },
   "dependencies": {
