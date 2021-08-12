@@ -5,6 +5,7 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
+    "start": "tsc --watch",
     "build": "tsc",
     "test": "jest",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
@@ -33,39 +34,38 @@
   "homepage": "https://github.com/thebiltheory/react-native-number-please#readme",
   "peerDependencies": {
     "react": "*",
-    "react-native": "*"
+    "react-native": "*",
+    "@react-native-picker/picker": "*"
   },
   "devDependencies": {
-    "@react-native-community/eslint-config": "^1.0.0",
-    "@semantic-release/github": "^7.0.5",
-    "@types/jest": "^25.2.1",
+    "@react-native-community/eslint-config": "^3.0.0",
+    "@semantic-release/github": "^7.2.3",
+    "@types/jest": "^27.0.0",
     "@types/lodash.find": "^4.6.6",
     "@types/lodash.findindex": "^4.6.6",
-    "@types/react": "^16.9.32",
-    "@types/react-native": "^0.62.2",
-    "@types/react-test-renderer": "^16.9.2",
-    "@typescript-eslint/eslint-plugin": "^2.27.0",
-    "@typescript-eslint/parser": "^2.27.0",
-    "babel-plugin-module-resolver": "^4.0.0",
+    "@types/react": "^17.0.17",
+    "@types/react-native": "^0.64.13",
+    "@types/react-test-renderer": "^17.0.1",
+    "@typescript-eslint/eslint-plugin": "^4.29.1",
+    "@typescript-eslint/parser": "^4.29.1",
+    "babel-plugin-module-resolver": "^4.1.0",
     "condition-circle": "^2.0.2",
-    "eslint": "^6.8.0",
-    "eslint-plugin-prettier": "^3.1.2",
-    "eslint-plugin-react": "^7.19.0",
-    "jest": "^26.0.1",
-    "prettier": "^2.0.4",
+    "eslint": "^7.32.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-react": "^7.24.0",
+    "jest": "^27.0.6",
+    "prettier": "^2.3.2",
     "react": "^16.13.1",
     "react-addons-test-utils": "^15.6.2",
     "react-native": "^0.62.1",
     "react-native-typescript-transformer": "^1.2.13",
-    "react-test-renderer": "^16.13.1",
-    "semantic-release": "^17.0.4",
-    "ts-jest": "^25.3.1",
-    "typescript": "^3.8.3"
+    "react-test-renderer": "^17.0.2",
+    "semantic-release": "^17.4.4",
+    "ts-jest": "^27.0.4",
+    "typescript": "^4.3.5"
   },
   "dependencies": {
-    "immer": "^6.0.3",
-    "lodash.find": "^4.6.0",
-    "lodash.findindex": "^4.6.0"
+    "@react-native-picker/picker": "^1.16.5"
   },
   "publishConfig": {
     "access": "public",

@@ -1,10 +1,9 @@
 import * as React from 'react';
-import { View, StyleSheet, Picker } from 'react-native';
-import find from 'lodash.find';
-import findIndex from 'lodash.findindex';
-import produce from 'immer';
+import { View, StyleSheet } from 'react-native';
+import { find} from './utils/array.utils';
 import { INumberPleaseProps, IValue } from './NumberPlease.interface';
 import range from './utils/range';
+import { Picker } from '@react-native-picker/picker';
 
 const PickerFactory: React.FC<any> = ({
   pickerProps,
@@ -16,11 +15,12 @@ const PickerFactory: React.FC<any> = ({
   const { id, label = '', min, max } = pickerProps;
   const numbers = range(min, max);
 
+
   return (
     <Picker
       style={{ ...styles.picker, ...pickerStyle }}
       selectedValue={selectedValue}
-      onValueChange={(value: any) => onChange({ id, value })}
+      onValueChange={(value: any) => onChange({ [id]: value })}
       itemStyle={itemStyle}
     >
       {numbers.map((number, index) => (
@@ -35,29 +35,41 @@ const PickerFactory: React.FC<any> = ({
 };
 
 const NumberPlease: React.FC<INumberPleaseProps> = ({
-  digits,
+  pickers,
   values,
   onChange,
   ...rest
 }: any) => {
-  const onChangeHandle = (value: IValue) => {
-    const nextValues = produce(values, (draft: any) => {
-      const index = findIndex(draft, { id: value.id });
-      draft[index] = value;
-    });
 
-    onChange(nextValues);
+  React.useEffect(() => {
+    Object.keys(values).some((key) => {
+      if (!find(pickers, (picker) => picker.id === key)) {
+        throw new Error(`Picker with id '${key}' not found. Double check your initialValues.`,);
+      }
+    });
+  }, [values, pickers]);
+
+  const onChangeHandle = (value: IValue) => {
+    onChange({
+      ...values,
+      ...value,
+    });
+  };
+
+
+  const findPickerValue = (picker:any) => {
+    return values[picker.id];
   };
 
   return (
     <View style={styles.container}>
-      {digits.map((picker: any, index: any) => {
-        const pickerValues = find(values, { id: picker.id });
+      {pickers.map((picker: any, index: any) => {
+        const pickerValue = findPickerValue(picker);
         return (
           <PickerFactory
             key={`${picker.id}-picker-${index}`}
             pickerProps={picker}
-            selectedValue={pickerValues?.value}
+            selectedValue={pickerValue}
             onChange={onChangeHandle}
             {...rest}
           />
