@@ -55,12 +55,7 @@ import { View, Text } from "react-native";
 import NumberPlease from "react-native-number-please";
 
 const ItsYourBirthday = () => {
-  const initialBirthday = [
-    { id: "day", value: 16 },
-    { id: "month", value: 4 },
-    { id: "year", value: 1970 },
-  ];
-
+  const initialBirthday = { 'day':  16,'year': 1970, 'month':  4  };
   const [birthday, setBirtday] = useState(initialBirthday);
 
   const date = [
@@ -86,7 +81,7 @@ const ItsYourBirthday = () => {
 
 Prop | Required | Description | Default | Types
 ---- | ---------| ----------- | ------- | -----
-`digits` | ✅ | Array of objects containing individal picker config  | `undefined` | `IDigit[]`
+`pickers` | ✅ | Array of objects containing individal picker config  | `undefined` | `IDigit[]`
 `values`  | ✅ | Array of objects initial values for each picker in `digits`  | `undefined` | `IValue[]`
 `onChange` | ✅ | Callback for when an item is selected.  | `undefined` | 
 `pickerStyle` | Optional | Picker wrapper style object.  | `{}`| 

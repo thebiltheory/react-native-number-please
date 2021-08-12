@@ -1,0 +1,32 @@
+{
+  "main": "__generated__/AppEntry.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "eject": "expo eject",
+    "postinstall": "expo-yarn-workspaces postinstall"
+  },
+  "dependencies": {
+    "@react-native-picker/picker": "1.16.1",
+    "expo": "~42.0.1",
+    "expo-status-bar": "~1.0.4",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-42.0.0.tar.gz",
+    "react-native-number-please": "../dist",
+    "react-native-web": "~0.13.12"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.0",
+    "expo-yarn-workspaces": "^1.5.2",
+    "metro-config": "^0.59.0"
+  },
+  "expo-yarn-workspaces": {
+    "symlinks": [
+      "react-native-number-please"
+    ]
+  },
+  "private": true
+}
