@@ -1,4 +1,4 @@
-export interface IDigit {
+export interface IRNNPPicker {
   id: string;
   label?: string;
   min: number;
@@ -7,13 +7,12 @@ export interface IDigit {
 }
 
 export interface IValue {
-  id: string;
-  value: number;
+  [key: string]: number;
 }
 
 export interface INumberPleaseProps {
-  digits: IDigit[];
-  values: IValue[];
+  pickers: IRNNPPicker[];
+  values: IValue;
   onChange(value: any): any;
   divider?: any;
   pickerStyle?: {};

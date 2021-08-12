@@ -81,7 +81,7 @@ const ItsYourBirthday = () => {
 
 Prop | Required | Description | Default | Types
 ---- | ---------| ----------- | ------- | -----
-`pickers` | ✅ | Array of objects containing individal picker config  | `undefined` | `IDigit[]`
+`pickers` | ✅ | Array of objects containing individal picker config  | `undefined` | `IRNNPPicker[]`
 `values`  | ✅ | Array of objects initial values for each picker in `digits`  | `undefined` | `IValue[]`
 `onChange` | ✅ | Callback for when an item is selected.  | `undefined` | 
 `pickerStyle` | Optional | Picker wrapper style object.  | `{}`| 
