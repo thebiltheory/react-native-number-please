@@ -73,5 +73,5 @@
     "registry": "https://registry.npmjs.org/",
     "tag": "latest"
   },
-  "engines" : { "node" : ">=0.12" }
+  "engines" : { "node" : ">=0.10.3 <15" }
 }
