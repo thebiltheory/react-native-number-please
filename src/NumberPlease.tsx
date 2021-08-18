@@ -5,41 +5,50 @@ import { INumberPleaseProps, IValue } from './NumberPlease.interface';
 import range from './utils/range';
 import { Picker } from '@react-native-picker/picker';
 
-const PickerFactory: React.FC<any> = ({
+const PickerFactory: React.FC<any> = React.forwardRef(({
   pickerProps,
   selectedValue,
   onChange,
-  pickerStyle,
+  style,
   itemStyle,
-}: any) => {
+  disabled,
+}: any, ref:any) => {
   const { id, label = '', min, max } = pickerProps;
   const numbers = range(min, max);
 
-
   return (
     <Picker
-      style={{ ...styles.picker, ...pickerStyle }}
-      selectedValue={selectedValue}
-      onValueChange={(value: any) => onChange({ [id]: value })}
-      itemStyle={itemStyle}
+    ref={ref}
+    style={{ ...styles.picker, ...style }}
+    selectedValue={selectedValue}
+    onValueChange={(value: any) => onChange({ [id]: value })}
+    itemStyle={itemStyle}
+    enabled={!disabled}
     >
       {numbers.map((number, index) => (
         <Picker.Item
-          key={`${id}-${number}-${index}`}
-          value={number}
-          label={`${number} ${label}`}
+        key={`${id}-${number}-${index}`}
+        value={number}
+        label={`${number} ${label}`}
+        enabled={!disabled}
+
         />
-      ))}
+        ))}
     </Picker>
   );
-};
+});
 
 const NumberPlease: React.FC<INumberPleaseProps> = ({
   pickers,
   values,
   onChange,
+  itemStyle,
+  style,
   ...rest
 }: any) => {
+
+  console.log(pickers);
+
 
   React.useEffect(() => {
     Object.keys(values).some((key) => {
@@ -64,13 +73,18 @@ const NumberPlease: React.FC<INumberPleaseProps> = ({
   return (
     <View style={styles.container}>
       {pickers.map((picker: any, index: any) => {
+        const {id, ref, disabled = false } = picker;
         const pickerValue = findPickerValue(picker);
         return (
           <PickerFactory
-            key={`${picker.id}-picker-${index}`}
+            ref={ref}
+            key={`${id}-picker-${index}`}
             pickerProps={picker}
             selectedValue={pickerValue}
             onChange={onChangeHandle}
+            disabled={disabled}
+            itemStyle={itemStyle}
+            style={style}
             {...rest}
           />
         );
@@ -87,7 +101,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   picker: {
-    height: '100%', width: 90,
+    height: '100%',
+    flex: 1,
   },
 });
 

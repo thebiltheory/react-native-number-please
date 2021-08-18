@@ -1,6 +1,8 @@
+/* eslint-disable react-native/no-inline-styles */
 
 import React, { useEffect, useState } from 'react';
-import { Platform } from 'react-native';
+import { useRef } from 'react';
+import { Button, Platform } from 'react-native';
 import { Text, View } from 'react-native';
 
 import NumberPlease from 'react-native-number-please';
@@ -11,14 +13,14 @@ export default function App() {
 
   const [birthday, setBirtday] = useState(initialBirthday);
 
-  const initialValues = {pizza: 0};
-  const [pizzas, setPizzas] = useState(initialValues);
-  const pizzaNumbers = [{ id: 'pizza', label: '🍕', min: 0, max: 99 }];
+  const birthdayRef = useRef();
+  const birthMonthRef = useRef();
+  const birthYearRef = useRef();
 
   const date = [
-    { id: 'day', label: '', min: 0, max: 31 },
-    { id: 'month', label: '', min: 0, max: 12 },
-    { id: 'year', label: '', min: 1900, max: new Date().getFullYear()},
+    { id: 'day', ref: birthdayRef,  label: '', min: 0, max: 31 },
+    { id: 'month', ref: birthMonthRef, label: '', min: 0, max: 12 },
+    { id: 'year', ref: birthYearRef, label: '', min: 1900, max: new Date().getFullYear() },
   ];
 
   useEffect(() => {
@@ -26,26 +28,27 @@ export default function App() {
   }, [birthday]);
 
 
-
   return (
-      <View style={{justifyContent: 'center', alignItems: 'center', flex: 1}}>
+      <View style={{justifyContent: 'space-around', alignItems: 'center', flex: 1}}>
       <Text>My birthday</Text>
-      <NumberPlease
-        pickers={date}
-        values={birthday}
-        onChange={(values) => setBirtday(values)}
-      />
+      <View style={{maxWidth: '80%'}}>
+        <NumberPlease
+          pickers={date}
+          values={birthday}
+          onChange={(values) => setBirtday(values)}
+          itemStyle={{color: 'red'}}
+          />
+      </View>
 
       <Text style={ {fontSize: 21}}>
         Your birthday is: {birthday.day}/{birthday.month}/{birthday.year}
       </Text>
 
-
-      <NumberPlease
-        pickers={pizzaNumbers}
-        values={pizzas}
-        onChange={(values) => setPizzas(values)}
-      />
+      {Platform.OS === 'android' &&  (
+        <View style={{flexDirection: 'row', justifyContent: 'space-around', width: '80%'}}>
+          <Button title="Open programmatically" onPress={() => birthdayRef?.current.focus()}/>
+        </View>
+      )}
 
     </View>
   );
