@@ -67,10 +67,11 @@
   },
   "dependencies": {
     "@react-native-picker/picker": "^1.16.5"
-  },
+  },  
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/",
     "tag": "latest"
-  }
+  },
+  "engines" : { "node" : ">=0.12" }
 }
