@@ -41,7 +41,6 @@
     "@react-native-community/eslint-config": "^3.0.0",
     "@semantic-release/changelog": "^5.0.1",
     "@semantic-release/git": "^9.0.0",
-    "@semantic-release/github": "^7.2.3",
     "@types/jest": "^27.0.0",
     "@types/lodash.find": "^4.6.6",
     "@types/lodash.findindex": "^4.6.6",
@@ -73,27 +72,5 @@
     "access": "public",
     "registry": "https://registry.npmjs.org/",
     "tag": "latest"
-  },
-  "release": {
-    "branch": "master",
-    "verifyConditions": "condition-circle",
-    "plugins": [
-      "@semantic-release/commit-analyzer",
-      "@semantic-release/release-notes-generator",
-      [
-        "@semantic-release/changelog",
-        {
-          "changelogFile": "CHANGELOG.md"
-        }
-      ],
-      [
-        "@semantic-release/git",
-        {
-          "assets": [
-            "CHANGELOG.md"
-          ]
-        }
-      ]
-    ]
   }
 }
