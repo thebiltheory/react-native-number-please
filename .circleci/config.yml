@@ -3,22 +3,20 @@ orbs:
   node: circleci/node@4.7.0
 jobs:
   build-and-test:
-    executor:
-      name: node/default
+    executor: node/default
     steps:
       - checkout
       - node/install-packages:
           cache-path: ~/project/node_modules
-          steps:
-            - run:
-                name:  📦 Install packages
-                command: yarn install
-            - run:
-                name:  🧹 Linting
-                command: yarn lint
-            - run:
-                name:  🧪 Testing
-                command: yarn test
+      - run:
+          name:  📦 Install packages
+          command: yarn install
+      - run:
+          name:  🧹 Linting
+          command: yarn lint
+      - run:
+          name:  🧪 Testing
+          command: yarn test
   publish:
     executor:
       name: node/default
