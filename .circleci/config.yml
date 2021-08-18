@@ -8,6 +8,7 @@ jobs:
       - checkout
       - node/install-packages:
           cache-path: ~/project/node_modules
+          override-ci-command: npm install
       - run:
           name:  📦 Install packages
           command: yarn install
