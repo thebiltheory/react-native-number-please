@@ -1,18 +1,35 @@
 import * as React from 'react';
 
 import { StyleSheet, View, Text } from 'react-native';
-import { multiply } from 'react-native-number-please';
+import NumberPlease from 'react-native-number-please';
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
+  const initialBirthday = { day: 16, year: 1970, month: 4 };
+  const [birthday, setBirtday] = React.useState(initialBirthday);
 
-  React.useEffect(() => {
-    multiply(3, 7).then(setResult);
-  }, []);
+  const { day, month, year } = birthday;
+
+  const date = [
+    { id: 'day', label: '', min: 0, max: 31 },
+    { id: 'month', label: '', min: 0, max: 12 },
+    { id: 'year', label: '', min: 1900, max: new Date().getFullYear() },
+  ];
+
+  const calculateAge = () => {
+    const ageDifMs = Date.now() - new Date(year, month, day).getTime();
+    const ageDate = new Date(ageDifMs);
+    return Math.abs(ageDate.getUTCFullYear() - 1970);
+  };
 
   return (
     <View style={styles.container}>
-      <Text>Result: {result}</Text>
+      <Text>When is your birthday?</Text>
+      <NumberPlease
+        pickers={date}
+        values={birthday}
+        onChange={(values) => setBirtday(values)}
+      />
+      <Text>You're {calculateAge()} years old</Text>
     </View>
   );
 }

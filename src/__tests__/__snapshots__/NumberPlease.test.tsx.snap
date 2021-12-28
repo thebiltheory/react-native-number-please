@@ -1,0 +1,642 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Picker should render a clean snapshot 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "flexDirection": "row",
+      "justifyContent": "center",
+      "width": "100%",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "flex": 1,
+        "height": "100%",
+      }
+    }
+  >
+    <RNCPicker
+      items={
+        Array [
+          Object {
+            "label": "0 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 0,
+          },
+          Object {
+            "label": "1 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 1,
+          },
+          Object {
+            "label": "2 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 2,
+          },
+          Object {
+            "label": "3 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 3,
+          },
+          Object {
+            "label": "4 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 4,
+          },
+          Object {
+            "label": "5 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 5,
+          },
+          Object {
+            "label": "6 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 6,
+          },
+          Object {
+            "label": "7 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 7,
+          },
+          Object {
+            "label": "8 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 8,
+          },
+          Object {
+            "label": "9 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 9,
+          },
+          Object {
+            "label": "10 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 10,
+          },
+          Object {
+            "label": "11 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 11,
+          },
+          Object {
+            "label": "12 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 12,
+          },
+          Object {
+            "label": "13 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 13,
+          },
+          Object {
+            "label": "14 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 14,
+          },
+          Object {
+            "label": "15 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 15,
+          },
+          Object {
+            "label": "16 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 16,
+          },
+          Object {
+            "label": "17 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 17,
+          },
+          Object {
+            "label": "18 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 18,
+          },
+          Object {
+            "label": "19 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 19,
+          },
+          Object {
+            "label": "20 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 20,
+          },
+          Object {
+            "label": "21 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 21,
+          },
+          Object {
+            "label": "22 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 22,
+          },
+          Object {
+            "label": "23 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 23,
+          },
+          Object {
+            "label": "24 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 24,
+          },
+          Object {
+            "label": "25 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 25,
+          },
+          Object {
+            "label": "26 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 26,
+          },
+          Object {
+            "label": "27 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 27,
+          },
+          Object {
+            "label": "28 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 28,
+          },
+          Object {
+            "label": "29 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 29,
+          },
+          Object {
+            "label": "30 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 30,
+          },
+          Object {
+            "label": "31 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 31,
+          },
+          Object {
+            "label": "32 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 32,
+          },
+          Object {
+            "label": "33 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 33,
+          },
+          Object {
+            "label": "34 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 34,
+          },
+          Object {
+            "label": "35 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 35,
+          },
+          Object {
+            "label": "36 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 36,
+          },
+          Object {
+            "label": "37 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 37,
+          },
+          Object {
+            "label": "38 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 38,
+          },
+          Object {
+            "label": "39 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 39,
+          },
+          Object {
+            "label": "40 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 40,
+          },
+          Object {
+            "label": "41 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 41,
+          },
+          Object {
+            "label": "42 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 42,
+          },
+          Object {
+            "label": "43 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 43,
+          },
+          Object {
+            "label": "44 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 44,
+          },
+          Object {
+            "label": "45 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 45,
+          },
+          Object {
+            "label": "46 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 46,
+          },
+          Object {
+            "label": "47 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 47,
+          },
+          Object {
+            "label": "48 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 48,
+          },
+          Object {
+            "label": "49 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 49,
+          },
+          Object {
+            "label": "50 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 50,
+          },
+          Object {
+            "label": "51 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 51,
+          },
+          Object {
+            "label": "52 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 52,
+          },
+          Object {
+            "label": "53 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 53,
+          },
+          Object {
+            "label": "54 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 54,
+          },
+          Object {
+            "label": "55 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 55,
+          },
+          Object {
+            "label": "56 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 56,
+          },
+          Object {
+            "label": "57 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 57,
+          },
+          Object {
+            "label": "58 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 58,
+          },
+          Object {
+            "label": "59 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 59,
+          },
+          Object {
+            "label": "60 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 60,
+          },
+          Object {
+            "label": "61 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 61,
+          },
+          Object {
+            "label": "62 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 62,
+          },
+          Object {
+            "label": "63 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 63,
+          },
+          Object {
+            "label": "64 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 64,
+          },
+          Object {
+            "label": "65 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 65,
+          },
+          Object {
+            "label": "66 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 66,
+          },
+          Object {
+            "label": "67 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 67,
+          },
+          Object {
+            "label": "68 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 68,
+          },
+          Object {
+            "label": "69 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 69,
+          },
+          Object {
+            "label": "70 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 70,
+          },
+          Object {
+            "label": "71 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 71,
+          },
+          Object {
+            "label": "72 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 72,
+          },
+          Object {
+            "label": "73 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 73,
+          },
+          Object {
+            "label": "74 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 74,
+          },
+          Object {
+            "label": "75 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 75,
+          },
+          Object {
+            "label": "76 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 76,
+          },
+          Object {
+            "label": "77 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 77,
+          },
+          Object {
+            "label": "78 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 78,
+          },
+          Object {
+            "label": "79 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 79,
+          },
+          Object {
+            "label": "80 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 80,
+          },
+          Object {
+            "label": "81 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 81,
+          },
+          Object {
+            "label": "82 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 82,
+          },
+          Object {
+            "label": "83 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 83,
+          },
+          Object {
+            "label": "84 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 84,
+          },
+          Object {
+            "label": "85 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 85,
+          },
+          Object {
+            "label": "86 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 86,
+          },
+          Object {
+            "label": "87 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 87,
+          },
+          Object {
+            "label": "88 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 88,
+          },
+          Object {
+            "label": "89 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 89,
+          },
+          Object {
+            "label": "90 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 90,
+          },
+          Object {
+            "label": "91 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 91,
+          },
+          Object {
+            "label": "92 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 92,
+          },
+          Object {
+            "label": "93 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 93,
+          },
+          Object {
+            "label": "94 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 94,
+          },
+          Object {
+            "label": "95 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 95,
+          },
+          Object {
+            "label": "96 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 96,
+          },
+          Object {
+            "label": "97 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 97,
+          },
+          Object {
+            "label": "98 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 98,
+          },
+          Object {
+            "label": "99 🍕",
+            "testID": undefined,
+            "textColor": undefined,
+            "value": 99,
+          },
+        ]
+      }
+      numberOfLines={1}
+      onChange={[Function]}
+      selectedIndex={0}
+      style={
+        Array [
+          Object {
+            "height": 216,
+          },
+          undefined,
+        ]
+      }
+      testID="pizza-picker"
+    />
+  </View>
+</View>
+`;
