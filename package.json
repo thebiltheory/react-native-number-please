@@ -34,7 +34,8 @@
   "keywords": [
     "react-native",
     "ios",
-    "android"
+    "android",
+    "picker"
   ],
   "repository": "https://github.com/thebiltheory/react-native-number-please",
   "author": "Bil Benhamou <bil@thebiltheory.com> (https://github.com/thebiltheory)",
