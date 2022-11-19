@@ -1,13 +1,23 @@
 import * as React from 'react';
 import { View, StyleSheet } from 'react-native';
-import { find } from './utils/array.utils';
-import type { INumberPleaseProps, IValue } from './NumberPlease.interface';
+import type {
+  INumberPleaseProps,
+  IPickerFactory,
+  IValue,
+} from './NumberPlease.interface';
 import range from './utils/range';
 import { Picker } from '@react-native-picker/picker';
 
-const PickerFactory: React.FC<any> = React.forwardRef(
+const PickerFactory = React.forwardRef(
   (
-    { pickerProps, selectedValue, onChange, style, itemStyle, disabled }: any,
+    {
+      pickerProps,
+      selectedValue,
+      onChange,
+      style,
+      itemStyle,
+      disabled,
+    }: IPickerFactory,
     ref: any
   ) => {
     const { id, label = '', min, max } = pickerProps;
@@ -19,7 +29,7 @@ const PickerFactory: React.FC<any> = React.forwardRef(
         ref={ref}
         style={{ ...styles.picker, ...style }}
         selectedValue={selectedValue}
-        onValueChange={(value: any) => onChange({ [id]: value })}
+        onValueChange={(value) => onChange({ [id]: value })}
         itemStyle={itemStyle}
         enabled={!disabled}
       >
@@ -36,25 +46,27 @@ const PickerFactory: React.FC<any> = React.forwardRef(
   }
 );
 
-const NumberPlease: React.FC<INumberPleaseProps> = ({
+const NumberPlease = ({
   pickers,
   values,
   onChange,
   itemStyle,
   style,
   ...rest
-}: any) => {
-  React.useEffect(() => {
-    Object.keys(values).some((key) => {
-      if (!find(pickers, (picker) => picker.id === key)) {
-        throw new Error(
-          `Picker with id '${key}' not found. Double check your initialValues.`
-        );
-      }
-    });
-  }, [values, pickers]);
+}: INumberPleaseProps) => {
+  // React.useEffect(() => {
+  //   Object.keys(values).some((key) => {
+  //     if (!pickers.find((picker: any) => picker.id === key)) {
+  //       throw new Error(
+  //         `Picker with id '${key}' not found. Double check your initialValues.`
+  //       );
+  //     }
+  //   });
+  // }, [values, pickers]);
 
   const onChangeHandle = (value: IValue) => {
+    console.log('VALUE', value);
+
     onChange({
       ...values,
       ...value,

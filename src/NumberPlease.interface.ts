@@ -1,5 +1,5 @@
 import type { RefObject } from 'react';
-import type { PickerProps } from 'react-native';
+import type { PickerProps } from '@react-native-picker/picker';
 
 export interface IRNNPPicker {
   /**
@@ -8,7 +8,7 @@ export interface IRNNPPicker {
    * @type {string}
    * @memberof IRNNPPicker
    */
-  id: string;
+  id: number | string;
   /**
    * Picker ref
    * @type {*}
@@ -42,8 +42,21 @@ export interface IRNNPPicker {
   step?: number;
 }
 
-export interface IValue {
-  [key: string]: any;
+// export interface IValue {
+//   // Need to be an object with all existing id's in pickers
+//   // Not more, not less.
+//   // [key: string]: number | string;
+//   [key: IRNNPPicker['id']]: number | string;
+// }
+export type IValue = {
+  [key: `${IRNNPPicker['id']}`]: string | number;
+};
+
+export interface IPickerFactory extends PickerProps<number | string> {
+  pickerProps: IRNNPPicker;
+  onChange: any;
+  style: any;
+  disabled: boolean;
 }
 
 export interface INumberPleaseProps extends PickerProps {
@@ -65,7 +78,7 @@ export interface INumberPleaseProps extends PickerProps {
    * @return {*}  {*}
    * @memberof INumberPleaseProps
    */
-  onChange(value: any): any;
+  onChange(value: any): void;
   /**
    * Divider to be used to seperate pickers.
    * @type {*}
