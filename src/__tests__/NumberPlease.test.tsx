@@ -1,7 +1,6 @@
 import React from 'react';
-import { fireEvent, render, waitFor } from '@testing-library/react-native';
+import { render } from '@testing-library/react-native';
 import NumberPlease from '../NumberPlease';
-import { debug } from 'console';
 
 describe('Picker', () => {
   test('should render a clean snapshot', () => {
@@ -18,6 +17,4 @@ describe('Picker', () => {
 
     expect(toJSON()).toMatchSnapshot();
   });
-
-  it.todo('should have the right value when changed');
 });

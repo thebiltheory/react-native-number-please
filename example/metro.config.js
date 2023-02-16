@@ -1,40 +1,50 @@
 const path = require('path');
-const blacklist = require('metro-config/src/defaults/blacklist');
-const escape = require('escape-string-regexp');
-const pak = require('../package.json');
+const { getDefaultConfig } = require('@expo/metro-config');
+const fs = require('fs');
+const exclusionList = require('metro-config/src/defaults/exclusionList');
+
+function escape(string) {
+  if (typeof string !== 'string') {
+    throw new TypeError('Expected a string');
+  }
+
+  // Escape characters with special meaning either inside or outside character sets.
+  // Use a simple backslash escape when it’s always valid, and a `\xnn` escape when the simpler form would be disallowed by Unicode patterns’ stricter grammar.
+  return string.replace(/[|\\{}()[\]^$+*?.]/g, '\\$&').replace(/-/g, '\\x2d');
+}
 
 const root = path.resolve(__dirname, '..');
+const pak = JSON.parse(
+  fs.readFileSync(path.join(root, 'package.json'), 'utf8')
+);
 
-const modules = Object.keys({
-  ...pak.peerDependencies,
-});
+const defaultConfig = getDefaultConfig(__dirname);
+
+const modules = [
+  '@babel/runtime',
+  'react-native-number-please',
+  ...Object.keys({
+    ...pak.dependencies,
+    ...pak.peerDependencies,
+  }),
+];
 
 module.exports = {
+  ...defaultConfig,
+
   projectRoot: __dirname,
   watchFolders: [root],
 
-  // We need to make sure that only one version is loaded for peerDependencies
-  // So we blacklist them at the root, and alias them to the versions in example's node_modules
   resolver: {
-    blacklistRE: blacklist(
-      modules.map(
-        (m) =>
-          new RegExp(`^${escape(path.join(root, 'node_modules', m))}\\/.*$`)
-      )
-    ),
+    ...defaultConfig.resolver,
+
+    blacklistRE: exclusionList([
+      new RegExp(`^${escape(path.join(root, 'node_modules'))}\\/.*$`),
+    ]),
 
     extraNodeModules: modules.reduce((acc, name) => {
       acc[name] = path.join(__dirname, 'node_modules', name);
       return acc;
     }, {}),
-  },
-
-  transformer: {
-    getTransformOptions: async () => ({
-      transform: {
-        experimentalImportSupport: false,
-        inlineRequires: true,
-      },
-    }),
   },
 };
